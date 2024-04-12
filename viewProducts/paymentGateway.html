@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="paymentGateway.css">
     <link rel="stylesheet" href="paymentUtilities.css">
+    <script defer src="paymentGateway.js"></script>
    
 </head>
 <body>
@@ -32,23 +33,23 @@
                         <div class="row">
 
                             <div class="col-lg-3">
-                                <input type="radio" name="cardType" value="visa">
+                                <input type="radio" name="cardType" id="cardType" value="visa">
                                 <img class="img-responsive images"
                                 src="/assets/images/70602_visa_straight_icon.png"> 
                                 </div>
 
                                <div class="col-lg-3">
-                                <input type="radio" name="cardType" value="Discover-Curved">
+                                <input type="radio" name="cardType" id="cardType" value="Discover-Curved">
                                 <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Discover-Curved.png">
                                </div>
 
                                 <div class="col-lg-3">
-                                    <input type="radio" name="cardType" value="Paypal-Curved">
+                                    <input type="radio" name="cardType" id="cardType" value="Paypal-Curved">
                                 <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Paypal-Curved.png"> 
                                 </div>
 
                                <div class="col-lg-3">
-                                 <input type="radio" name="cardType" value="American-Express-Curved">
+                                 <input type="radio" name="cardType" id="cardType" value="American-Express-Curved">
                                 <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/American-Express-Curved.png"> 
                                </div>
                             </div>
@@ -60,28 +61,28 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="form-group"> <label>CARD NUMBER</label>
-                                        <div class="input-group"> <input type="tel" class="form-control mb-3" placeholder="Valid Card Number" /> <span class="input-group-addon"><span class="fa fa-credit-card"></span></span> </div>
+                                        <div class="input-group"> <input type="tel" class="form-control mb-3" id="cardno" placeholder="Valid Card Number" /> <span class="input-group-addon"><span class="fa fa-credit-card"></span></span> </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-7 col-md-7">
-                                    <div class="form-group"> <label><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label> <input type="tel" class="form-control mb-3" placeholder="MM / YY" /> </div>
+                                    <div class="form-group"> <label><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label> <input type="tel" class="form-control mb-3" id="expdate" placeholder="MM / YY" /> </div>
                                 </div>
                                 <div class="col-xs-5 col-md-5 ">
-                                    <div class="form-group"> <label>CV CODE</label> <input type="tel" class="form-control" placeholder="CVC" /> </div>
+                                    <div class="form-group"> <label>CV CODE</label> <input type="tel" class="form-control" id="cvcode" placeholder="CVC" /> </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div class="form-group"> <label>CARD OWNER</label> <input type="text" class="form-control" placeholder="Card Owner Name" /> </div>
+                                    <div class="form-group"> <label>CARD OWNER</label> <input type="text" class="form-control" id="cardowner" placeholder="Card Owner Name" /> </div>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="panel-footer">
                         <div class="row">
-                            <div class="col-xs-12 mt-3"> <button class="btn btn-success btn-lg btn-block">Confirm Payment</button> </div>
+                            <div class="col-xs-12 mt-3"> <button class="btn btn-success btn-lg btn-block" id="carddetails">Confirm Payment</button> </div>
                         </div>
                     </div>
                 </div>
