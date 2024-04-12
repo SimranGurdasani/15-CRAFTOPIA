@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ececec;
+  font-family: Means Web, Georgia, Times, Times New Roman, serif;
+}
+.images {
+  height: 70px;
+  width: 60px;
+  left: 20px;
+  text-align: center;
+}
+.cart-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-table th {
+  background-color: #f2f2f2;
+}
+.btn {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.btn.remove {
+  background-color: #dc3545;
+}
+
+.btn.checkout {
+  background-color: #28a745;
+  display: flex;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+.btn.checkout:hover {
+  transition: ease all 0.3s;
+  transform: scale(1.06);
+}
