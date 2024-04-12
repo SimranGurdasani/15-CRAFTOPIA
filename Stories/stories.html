@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftInsight</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="stories.css">
+    <script src="index.js" defer></script>
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+    <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">
+            <div class="brand-logo m-auto">
+              <img
+              src="../assets/images/craftopia.png"                width="100%"
+                class="align-self-center"
+                alt="Brand Logo"
+              />
+            </div>
+          </h5>
+          <button
+            type="button"
+            class="btn-close position-absolute top-0 end-0 m-2"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <form action="">
+          <div class="modal-body">
+            <div class="login-content text-center d-none">
+              <div class="input-group d-flex justify-content-center mb-3">
+                <span class="input-group-text">
+                  <i class="fa-regular fa-circle-user"></i>
+                </span>
+                <input
+                  type="text"
+                  id="name-ip"
+                  placeholder="Username or Email"
+                />
+              </div>
+              <div class="input-group d-flex justify-content-center mb-3">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-key"></i>
+                </span>
+                <input type="text" id="password-ip" placeholder="Password" />
+              </div>
+              <div>
+                <span>Already a user?</span>
+                <button type="button" class="button sign-up">Sign Up</button>
+              </div>
+            </div>
+            <div class="sign-up-content text-center">
+              <div class="input-group d-flex justify-content-center mb-3">
+                <span class="input-group-text">
+                  <i class="fa-regular fa-circle-user"></i>
+                </span>
+                <input
+                  type="text"
+                  id="name-ips"
+                  placeholder="Username or Email"
+                />
+              </div>
+              <div class="input-group d-flex justify-content-center mb-3">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-key"></i>
+                </span>
+                <input type="text" id="password-ips" placeholder="Password" />
+              </div>
+              <div class="input-group d-flex justify-content-center mb-3">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-key"></i>
+                </span>
+                <input
+                  type="text"
+                  id="re-enterpassword-ips"
+                  placeholder="Re-enter Password"
+                />
+              </div>
+              <div>
+                <span>Already a user?</span>
+                <button type="button" class="button login">Login</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn submit-btn m-auto" id="submitData-btn">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar starts here -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-style fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img
+        src="../assets/images/craftopia.png"
+          alt="Brand Logo"
+        />
+      </a>
+      <div class="tagline">Craftopia: Where Every Creation Tells a Story</div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="../MINI_HOME/index.html" target="_blank" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../viewProducts/index.html" target="_blank">View Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../AboutUs/aboutUs.html" target="_blank">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../RegionalArt/regional.html" target="_blank">Regional Art</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Stories/stories.html" target="_blank">Success Stories</a>
+          </li>
+        </ul>
+        <form action="" class="d-none d-lg-block d-xl-block d-xxl-block">
+          <!-- Dono components ko pass lane k liye icon aur input tag vale ko -->
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" />
+            <!-- Icon ko input vale k andar daal dena aise seem karvane vala -->
+            <span class="input-group-text">
+              <button>
+                <i class="fa fa-magnifying-glass"></i>
+              </button>
+            </span>
+          </div>
+        </form>
+        <span>
+          <!-- Icon trigger modal -->
+          <i
+            class="user fa-solid fa-user mx-3 d-none d-lg-block d-xl-block d-xxl-block"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          ></i>
+        </span>
+        <i
+          class="fa-solid fa-cart-shopping mx-3 d-none d-lg-block d-xl-block d-xxl-block"
+        ></i>
+      </div>
+      <div class="d-lg-none">
+        <form action="">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" />
+            <span class="input-group-text">
+              <button>
+                <i class="fa fa-magnifying-glass mx-3"></i>
+              </button>
+            </span>
+          </div>
+        </form>
+        <span>
+          <!-- Icon trigger modal -->
+          <i
+            class="user fa-solid fa-user mx-3"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          ></i>
+        </span>
+        <span>
+          <i class="fa-solid fa-cart-shopping mx-3"></i>
+        </span>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar ends here -->
+    <!-- Hero starts -->
+    <div class=" hero ">
+       <div class="row align-items-center justify-content-spacearound align-content-center mx-3" style="height:100vh;">
+        <p class=" display-3 col-6 text-end " style="color :#241c15 ;"> Stories Behind The Art </p>
+        <img src="Pictures/picture01.avif" alt="" class="col-5 pic01">
+       </div>
+    </div>
+    <!-- Hera ends -->
+
+    <!-- Story Intro Starts -->
+    <div class="row  justify-content-center align-content-center align-items-center m-3">
+        <div class="row justify-content-center align-content-center align-items-center col-8">
+            <p id="text"> Craftopia, the ultimate destination for handcrafted marvels! Within our dynamic marketplace, we take pride in honoring the diverse spectrum of Indian arts and crafts. Here, adept artisans breathe life into their cultural heritage, channeling passion into every intricately fashioned masterpiece. Join us on a captivating journey through the realms of creativity, where tradition meets innovation, and every creation not only showcases artisanal skill but also tells a compelling and unique story.
+            </p>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center col-9 m-3">
+            <p class="h2 text-center">Crafting Legacies: Unveiling the Untold Stories of Regional Artisans</p>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <img src="Pictures/maharashta.jpg" alt="" class="col-4">
+            
+            <div class="col-6">
+                 <p class="story">Maharashtra's handmade art is a captivating saga woven into the fabric of its culture. The intricate Paithani silk sarees embody generations of skill, narrating stories of tradition and timeless elegance. Warli art, a rural masterpiece, paints vivid tales of village life and folklore on canvas, showcasing the state's deep-rooted heritage. Bidriware from Bidar exemplifies metal mastery with silver inlay, reflecting historical influences and regional finesse. Kolhapuri chappals stride through time with their unique design, embodying centuries-old shoemaking traditions. Pandharpur turmeric, a golden symbol of the land, tells an agricultural story, transcending culinary boundaries to become a cultural icon. Maharashtra's handmade art is not merely craft; it's a living chronicle, where every piece encapsulates the legacy, craftsmanship, and vibrant narratives that define the state's artistic richness.</p>
+            </div>
+            <button type="submit" class=" btn col-2"  ">View Products</button>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <div class="col-6">
+                 <p class="story">Madhya Pradesh's Handmade Odyssey unfurls a captivating narrative of cultural richness and creativity. Gond Art, born from tribal traditions, paints vibrant stories on canvas, echoing the indigenous wealth of the state. Maheshwari Handloom, with its distinctive patterns, weaves tales of traditional craftsmanship from the looms of Maheshwar. Bagh Print, an ancient art from Dhar district, imprints tales of resist-dyeing traditions on fabric, a heritage carried through generations.
+                 Bamboo and Cane Craft from Chhindwara speaks of rural traditions, crafting functional and decorative items with a commitment to sustainability. Each creation, whether a Gond painting, Maheshwari weave, Bagh print, or bamboo craft, is a chapter in Madhya Pradesh's artistic odyssey—a testament to cultural depth and enduring artisanal legacy that resonates through every stroke, weave, print, and craft.</p>
+            </div>
+            <img src="Pictures/mp.jpg" alt="" class="col-5">
+            <button type="submit" class=" btn col-2"  >View Products</button>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <img src="Pictures/Telangana.gif" alt="" class="col-5">
+            <div class="col-5">
+                 <p class="story">Telangana's handmade art is a vibrant tale of cultural resilience. Cheriyal Scroll Paintings echo ancient myths, Bidriware reflects Persian influences, and Pembarthi Metal Craft narrates a copperware legacy. Ikat Weaving captures textile traditions, while Nirmal Art's lacquer work preserves tales of royal patronage. Each creation mirrors the rich tapestry of Telangana's history, skill, and artistic innovation. From the ancient Kakatiya dynasty to contemporary handloom weavers, Telangana's artisans breathe life into stories through every meticulously crafted piece. This cultural journey transcends craft, weaving together a narrative of heritage and creativity, showcasing the enduring spirit of Telangana's handmade artistry.</p>
+            </div>
+            <p class="col-1"></p>
+            <button type="submit" class=" btn col-2 mt-3" >View Products</button>
+        </div>
+        
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <div class="col-6">
+                 <p class="story">Odisha's Handmade Artistry: Crafting Tales of Tradition and Devotion
+                    Enter the enchanting realm of Odisha's handmade art, where each creation is a canvas for stories steeped in tradition and devotion. The timeless craft of Pattachitra unfolds mythical narratives and religious stories, its intricate details reflecting the rich cultural tapestry of the state. The delicate art of Silver Filigree, known as Tarakashi, narrates stories of skilled artisans meticulously crafting jewelry and artifacts, showcasing Odisha's metallurgical finesse. Appliqué work from Pipili stitches vibrant tales onto fabric, capturing the essence of festive celebrations. The ancient craft of Dhokra casting recounts stories of tribal communities, shaping brass into expressive figurines that echo Odisha's tribal heritage. In the rhythmic beats of Odissi music and dance, experience the fusion of artistic expression and spiritual devotion. Odisha's handmade art is a living testament to its diverse traditions, encapsulating stories of craftsmanship, spirituality, and cultural richness passed down through generations.</p>
+            </div>
+            <img src="Pictures/Odissa.jpg" alt="" class="col-5">
+            <button type="submit" class=" btn col-2"  >View Products</button>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <img src="Pictures/kerala.jpg" alt="" class="col-6">
+            <div class="col-5">
+                 <p class="story">Kerala's handmade art narrates a captivating history, echoing through the ages. Kathakali, an ancient dance-drama rooted in Sanskrit texts, and mural paintings dating back to the 8th century, are living testimonials to artistic evolution. Nettipattam, with its origins in grand temple festivals, holds historical and religious significance. Nalukettu architecture, with intricately carved wooden pillars, preserves the aesthetics of bygone eras. The craft of coconut shell carving, deeply rooted in coastal traditions, mirrors historical trade influences. Each creation weaves a narrative of Kerala's enduring commitment to creativity, spirituality, and cultural grandeur. Across centuries, this artistic tapestry reflects a vibrant past, telling stories of tradition, trade, and the timeless beauty that defines the cultural heritage of 'God's Own Country.'</p>
+            </div>
+            <button type="submit" class=" btn col-2 mt-3"  >View Products</button>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <div class="col-6">
+                 <p class="story">Rajasthan's Handmade Artistry: An Ode to Royalty, Color, and Tradition
+                    Step into the regal realm of Rajasthan, where handmade art weaves a majestic tapestry of stories that transcend time. Rajasthani Miniature Paintings, dating back to the 16th century, portray tales of courtly love and historical epics, showcasing the state's rich artistic heritage. The intricate craftsmanship of Block Printing in textiles reveals the cultural narratives imprinted on vibrant fabrics, a tradition passed down through generations.
+                    Jaipur's Blue Pottery, an art form influenced by Persian techniques, narrates stories of cross-cultural exchanges and royal patronage. The art of Kundan Jewelry, with its elaborate gem-setting, reflects the opulence and magnificence of Rajput traditions. From the vibrant hues of Bandhani textiles to the storytelling in Meenakari, Rajasthan's handmade art is a kaleidoscope of royal tales, vivid traditions, and a legacy of craftsmanship that has withstood the test of time, mirroring the state's glorious history.</p>
+            </div>
+            <img src="Pictures/rajasthan.gif" alt="" class="col-5">
+            <p></p>
+            <button type="submit" class=" btn col-2"  >View Products</button>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <img src="Pictures/Punjab.gif" alt="" class="col-6">
+            <div class="col-5">
+                 <p class="story">Punjab's Handmade Artistry: A Symphony of Culture and Craft
+                    Embark on a journey into the heart of Punjab's vibrant handmade art, where each creation echoes the soulful narratives of the land. Phulkari, a traditional embroidery technique, tells tales of love and celebration through vivid patterns and vibrant threads. The intricate art of Punjabi Juttis weaves stories of skilled cobblers preserving age-old craftsmanship, adorning feet with cultural pride. Explore the heritage of Punjabi pottery, where clay transforms into utilitarian and decorative items, reflecting the earthy spirit of the region. Sikh art, epitomized by the exquisite Sikh turbans, showcases intricate craftsmanship that symbolizes devotion and identity. In the rhythmic beats of Bhangra, discover the essence of Punjab's lively culture expressed through handmade instruments and vibrant costumes. Punjab's handmade art is more than craft; it's a living anthology, narrating tales of tradition, identity, and the boundless creativity of its people.</p>
+            </div>
+            <button type="submit" class=" btn col-2"  >View Products</button>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <div class="col-6">
+                 <p class="story">Tamil Nadu's handmade art weaves a vibrant narrative of tradition and craft. Tanjore Painting, adorned with intricate gold leaf details, tells mythological tales, embodying the cultural richness of the region. Channapatna Toys, blending traditional craftsmanship with contemporary design, reflect the skilled legacy of the town's artisans. Kanchipuram Silk Sarees, with their luxurious texture and intricate patterns, showcase the artistry of handloom weavers, preserving generations of weaving traditions. Athangudi Tiles, with their vibrant designs, echo tales of architectural beauty and traditional flooring techniques. Each creation is a testament to Tamil Nadu's artistic heritage, where every stroke and weave carries forward a story of cultural depth and enduring craftsmanship.</p>
+            </div>
+            <p class="col-1"></p>
+            <img src="Pictures/Tamilnadu.jpg" alt="" class="col-4">
+            <button type="submit" class=" btn col-2"  >View Products</button>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <img src="Pictures/UttarPradesh.avif" alt="" class="col-6">
+            <div class="col-5">
+                 <p class="story">Uttar Pradesh's Handmade Heritage weaves a captivating narrative of tradition and craft. Banarasi Silk from Varanasi, adorned with intricate patterns, tells tales of opulence and weaving legacy. Lucknow's Chikankari Embroidery delicately stitches stories on fine fabrics, a testament to artisanal artistry. Saharanpur's Wooden Carvings showcase intricate designs, embodying the rich heritage of woodworking. Gorakhpur's Terracotta, with its rustic charm, molds clay into expressive forms, reflecting cultural depth. Additionally, the art of crafting Ceramic Handmade Utensils adds a culinary touch, combining functionality with aesthetic elegance. Each creation pays homage to Uttar Pradesh's artistic legacy, where every stitch, weave, carve, and utensil carries forward a narrative of cultural richness and enduring craftsmanship.</p>
+            </div>
+            <button type="submit" class=" btn col-2 mt-3"  >View Products</button>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <div class="col-5">
+                 <p class="story">Bihar's handmade art unfolds a narrative of cultural richness and artistic finesse. Madhubani art, with its vibrant colors, breathes life into mythological tales and daily rituals, narrating the essence of Bihar's heritage. Sikki grass craft weaves eco-friendly tales of rural ingenuity, emphasizing sustainable craftsmanship. Patna Qalam's calligraphy adds a touch of Islamic artistry, reflecting Bihar's diverse cultural influences. Bhagalpur silk, with its fine texture, encapsulates the artistry passed down through generations. Nalanda's terracotta tells ancient tales, molding clay into cultural chronicles. In each stroke, weave, and sculpture, Bihar's handmade art echoes the stories of its people, preserving traditions and contributing to the vibrant tapestry of Indian craftsmanship.</p>
+            </div>
+            <img src="Pictures/Bihar.PNG" alt="" class="col-5">
+            <button type="submit" class=" btn col-2"  >View Products</button>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <img src="Pictures/Karnataka.jpg" alt="" class="col-5">
+            
+            <div class="col-6">
+                 <p class="story">Karnataka's Handmade Odyssey is a captivating journey through cultural heritage and artisanal finesse. Mysore Silk Weaving, with its regal elegance, threads tales of intricate craftsmanship, reflecting the state's rich textile legacy. Bidriware from Bidar unveils stories of metal mastery, where silver and gold intricately embellish blackened metal, showcasing Karnataka's historical influences.
+                 The timeless art of Mysore Painting on canvas captures cultural spirit and mythological tales, resonating with vivid hues and intricate details. Channapatna Toys, with their vibrant colors and playful designs, narrate centuries-old stories of sustainable craftsmanship, embodying Karnataka's commitment to preserving tradition. </p>
+            </div>
+            <button type="submit" class=" btn col-2 mt-3"  >View Products</button>
+        </div>
+        <div class="row justify-content-center align-content-center align-items-center content col-10">
+            <div class="col-6">
+                 <p class="story">Gujarat's Handmade Tapestry is a vibrant tableau of tradition and craftsmanship. Kutch Embroidery stitches narratives of the desert landscape, its intricate patterns reflecting the communities' rich heritage. Patola Weaving from Patan narrates tales of precision, as skilled artisans create double-ikat silk textiles with timeless expertise. The art of Bandhani tie-dye unfolds stories of celebration, festivity, and vibrant patterns adorning fabrics.
+
+                    Gujarat's Wood Carving, with its ornate designs, mirrors tales of architectural grandeur and traditional woodworking. Each creation, whether embroidered textile, woven Patola, tie-dyed Bandhani, or carved wood, is a chapter in Gujarat's artistic tapestry—a testament to cultural richness and enduring craftsmanship that resonates through every stitch, weave, dye, and carve.</p>
+            </div>
+            <img src="Pictures/Gujrat.jpg" alt="" class="col-5">
+            <button type="submit" class=" btn col-2"  >View Products</button>
+        </div>
+        
+    </div>
+    <!-- Story Intro Ends -->
+        <!-- footer section start -->
+        <div class="footer-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                  <div class="parent-footer-logo">
+                    <img src="../assets/images/craftopia.png" class="footer-logo-img" />
+                  </div>
+                  <div class="footer-tagline">
+                    Craftopia: Where Every Creation Tells a Story
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                  <h4 class="footer-title">Navigation</h4>
+                  <div class="footer-left-menu">
+                    <div>
+                      <ul class="footer-menu">
+                        <li>
+                          <a href="../MINI_HOME/index.html">Home</a>
+                        </li>
+                        <li>
+                          <a href="../viewProducts/index.html">View Products</a>
+                        </li>
+                        <li>
+                          <a href="../AboutUs/aboutUs.html">About Us</a>
+                        </li>
+                        <li>
+                          <a href="../RegionalArt/regional.html">Regional Art</a>
+                        </li>
+                        <li>
+                          <a href="../Stories/stories.html">Success Stories</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                  <div>
+                    <h4 class="footer_taital">Phone Number</h4>
+                    <p class="footer_text">+44 (0) 1303 297888</p>
+                  </div>
+                  <div>
+                    <h4 class="footer_taital">Email</h4>
+                    <p class="footer_text">demo@gmail.com</p>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                  <h4 class="footer_taital">Address</h4>
+                  <p class="footer_text">123 Main Street Anytown, USA 12345</p>
+                </div>
+              </div>
+              <div class="footer-section-2">
+                <div class="row">
+                  <div class="col-sm-4 col-md-4 col-lg-3">
+                    <div>
+                      <ul class="social-icons align-self-center">
+                        <li class="social-icon">
+                          <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        </li>
+                        <li class="social-icon">
+                          <a href="#"
+                            ><i
+                              class="fa-brands fa-instagram text-white"
+                              style="
+                                background-image: linear-gradient(
+                                  #4f5bd5,
+                                  #962fbf,
+                                  #d62976,
+                                  #fa7e1e,
+                                  #feda75
+                                );
+                                border-radius: 11px;
+                                padding: 5px;
+                                font-size: 27px;
+                              "
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="social-icon">
+                          <a href="#"
+                            ><i
+                              class="fa-brands fa-linkedin fa-2x"
+                              style="color: #0a66c2"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="social-icon">
+                          <a href="#"
+                            ><i
+                              class="fa-brands fa-twitter fa-2x"
+                              style="color: #1da1f2"
+                            ></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-8 col-md-8 col-lg-9 justify-content-center">
+                    <input
+                      type="text"
+                      class="address-text"
+                      placeholder="Enter your Email"
+                      name="text"
+                    />
+                    <button type="button" class="subscribe-btn">SUBSCRIBE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- footer section end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

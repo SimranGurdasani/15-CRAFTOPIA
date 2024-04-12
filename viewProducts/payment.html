@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="paymentUtilities.css">
+    <!-- <script src="stateapi.js"></script> -->
+    <script src="payment.js" defer></script>
+
+</head>
+
+<body>
+    
+    <div class="container-parent d-flex center">
+    <div class="container">
+        <div class="img-parent justifyCenter d-flex">
+        <img src="/assets/images/craftopia.png" alt="">
+        </div>
+
+        <ul class="options d-flex center">
+            <!-- <li>
+                <a href="" class="mx-1">Cart</a>
+                <i class="fa-solid fa-greater-than mx-1"></i>
+            </li> -->
+            <li>
+                <a href="" class="mx-1" style="color: rgb(102, 101, 101);">Shipping Information</a>
+            </li>
+            <!-- <li>
+                <a href="">Payment</a>
+            </li> -->
+        </ul>
+
+        <div class="contact-field d-flex space-between">
+        <h4>Contact</h4>
+        <!-- <span>Have an account? <a href="">Log in</a></span> -->
+        </div>
+
+        <form action="" class="form-ip">
+            <input id="email-ips" type="text" placeholder="Email">
+        </form>
+
+        <div class="shipping">
+             <h4>Shipping Address</h4>
+        </div>
+
+        <form action="">
+           
+                 <!-- <input type="text" placeholder="Country/region" >  -->
+                 <select name="" id="country" class="form-ip ">
+                    <option value="">Country/region</option>
+                    <option value="">India</option>
+                  </select>
+                  
+              
+        </form>
+
+      
+        <div class="form-margin d-flex form-ip">
+            <input type="text" placeholder="First name" id="fname-ips" class="fname ">
+            <input type="text" placeholder="Last name" id="lname-ips" class="lname">
+        </div>
+
+        <div class="form-ip">
+            <input type="text" id="address-ips" placeholder="Address">
+        </div>
+
+        <div class="form-ip form-margin">
+            <input type="text" id="landmark-ips" placeholder="Landmark (optional)">
+        </div>
+
+         <div class="form-margin d-flex form-ip">
+            <input type="text" placeholder="City"  id="city-ips" class="fname">
+            <!-- <input type="text" placeholder="State" class="state"> -->
+            <select name="" id="state" >
+                 <option value="" >State</option>
+  <option value="AN">Andaman and Nicobar Islands</option>
+  <option value="AP">Andhra Pradesh</option>
+  <option value="AR">Arunachal Pradesh</option>
+  <option value="AS">Assam</option>
+  <option value="BR">Bihar</option>
+  <option value="CH">Chandigarh</option>
+  <option value="CT">Chhattisgarh</option>
+  <option value="DN">Dadra and Nagar Haveli</option>
+  <option value="DD">Daman and Diu</option>
+  <option value="DL">Delhi</option>
+  <option value="GA">Goa</option>
+  <option value="GJ">Gujarat</option>
+  <option value="HR">Haryana</option>
+  <option value="HP">Himachal Pradesh</option>
+  <option value="JK">Jammu and Kashmir</option>
+  <option value="JH">Jharkhand</option>
+  <option value="KA">Karnataka</option>
+  <option value="KL">Kerala</option>
+  <option value="LD">Lakshadweep</option>
+  <option value="MP">Madhya Pradesh</option>
+  <option value="MH">Maharashtra</option>
+  <option value="MN">Manipur</option>
+  <option value="ML">Meghalaya</option>
+  <option value="MZ">Mizoram</option>
+  <option value="NL">Nagaland</option>
+  <option value="OR">Odisha</option>
+  <option value="PY">Puducherry</option>
+  <option value="PB">Punjab</option>
+  <option value="RJ">Rajasthan</option>
+  <option value="SK">Sikkim</option>
+  <option value="TN">Tamil Nadu</option>
+  <option value="TS">Telangana</option>
+  <option value="TR">Tripura</option>
+  <option value="UP">Uttar Pradesh</option>
+  <option value="UK">Uttarakhand</option>
+  <option value="WB">West Bengal</option>
+</select>
+
+           
+            <input type="text" placeholder="PIN Code" id="pincode-ips" class="pin-code ">
+        </div>
+       
+        <div class="form-ip form-margin">
+            <input type="text" id="phone-ips" placeholder="Phone">
+        </div>
+
+        <div class="d-flex checkbox">
+        <input type="checkbox" id="saveinfo-ips">
+        <p>Save this information for next time</p>
+        </div>
+
+        <div class="d-revflex d-flex">
+       
+            <a  id="continueToPayment" class="payment-btn btn btn-lg btn-block"
+            style="color: white; padding: 10px;">Continue to Payment</a>
+       
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>

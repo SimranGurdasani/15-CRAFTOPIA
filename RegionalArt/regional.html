@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regional Arts</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <!-- <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-form">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              <div class="brand-logo m-auto">
+                <img
+                  src="../assets/images/craftopia.png"
+                  width="100%"
+                  class="align-self-center"
+                  alt="Brand Logo"
+                />
+              </div>
+            </h5>
+            <button
+              type="button"
+              class="btn-close position-absolute top-0 end-0 m-2"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+         <div class="form">
+           <form action="">
+            <div class="modal-body">
+              <div class="login-content text-center d-none">
+                <div class="input-group d-flex justify-content-center mb-3">
+                  <span class="input-group-text">
+                    <i class="fa-regular fa-circle-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="name-ip"
+                    placeholder="Username or Email"
+                  />
+                </div>
+                <div class="input-group d-flex justify-content-center mb-3">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-key"></i>
+                  </span>
+                  <input type="text" id="password-ip" placeholder="Password" />
+                </div>
+                <div>
+                  <span>Already a user?</span>
+                  <button type="button" class="button sign-up">Sign Up</button>
+                </div>
+              </div>
+              <div class="sign-up-content text-center">
+                <div class="input-group d-flex justify-content-center mb-3">
+                  <span class="input-group-text">
+                    <i class="fa-regular fa-circle-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="name-ips"
+                    placeholder="Username or Email"
+                  />
+                </div>
+                <div class="input-group d-flex justify-content-center mb-3">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-key"></i>
+                  </span>
+                  <input type="text" id="password-ips" placeholder="Password" />
+                </div>
+                <div class="input-group d-flex justify-content-center mb-3">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-key"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="re-enterpassword-ips"
+                    placeholder="Re-enter Password"
+                  />
+                </div>
+                <div>
+                  <span>Already a user?</span>
+                  <button type="button" class="button login">Login</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn submit-btn m-auto" id="submitData-btn">
+                Submit
+              </button>
+            </div>
+          </form>
+         </div>
+        </div>
+      </div>
+      </div>
+    </div> -->
+
+    <!-- Navbar starts here -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-style fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/images/craftopia.png" alt="Brand Logo" />
+        </a>
+        <div class="tagline">Craftopia: Where Every Creation Tells a Story</div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="../MINI_HOME/index.html"
+                target="_blank"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../viewProducts/index.html"
+                target="_blank"
+                >View Products</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../AboutUs/aboutUs.html" target="_blank"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../RegionalArt/regional.html"
+                target="_blank"
+                >Regional Art</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Stories/stories.html" target="_blank"
+                >Success Stories</a
+              >
+            </li>
+          </ul>
+          <form action="" class="d-none d-lg-block d-xl-block d-xxl-block">
+            <!-- Dono components ko pass lane k liye icon aur input tag vale ko -->
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" />
+              <!-- Icon ko input vale k andar daal dena aise seem karvane vala -->
+              <span class="input-group-text">
+                <button>
+                  <i class="fa fa-magnifying-glass"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+          <span>
+            <!-- Icon trigger modal -->
+            <i
+              class="user fa-solid fa-user mx-3 d-none d-lg-block d-xl-block d-xxl-block"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            ></i>
+          </span>
+          <i
+            class="fa-solid fa-cart-shopping mx-3 d-none d-lg-block d-xl-block d-xxl-block"
+          ></i>
+        </div>
+        <div class="d-lg-none">
+          <form action="">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" />
+              <span class="input-group-text">
+                <button>
+                  <i class="fa fa-magnifying-glass mx-3"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+          <span>
+            <!-- Icon trigger modal -->
+            <i
+              class="user fa-solid fa-user mx-3"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            ></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-cart-shopping mx-3"></i>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar ends here -->
+    <!-- Regional art starts -->
+    <div class="container">
+      <h1 class="text-center display-3" style="margin: 30px">REGIONAL ARTS</h1>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/MAHARASHTRA-FINAL\ 3.jpg')"
+              ></div>
+              <h4 class="text-center">Maharashtra Artwork</h4>
+              <p style="text-align: justify">
+                Maharashtra, a state in western India, has a rich cultural
+                heritage, including a vibrant tradition in the arts.
+                Maharashtra's arts reflect a blend of tradition and modernity,
+                contributing significantly to India's cultural landscape.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#myModal"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bihar art starts -->
+
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/bihar-3.jpg')"
+              ></div>
+              <h4 class="text-center">Bihar Artwork</h4>
+              <p style="text-align: justify">
+                Bihar's rich legacy as an ancient civilization fostered a unique
+                painting tradition, evolving over centuries. The Gupta era
+                marked a pivotal moment, shaping Bihar's distinct artistic
+                identity."
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Bihar"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bihar art ends -->
+
+        <!-- Punjab starts -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/PUNJAB\ 3.jpg')"
+              ></div>
+              <h4 class="text-center">Punjab Artwork</h4>
+              <p style="text-align: justify">
+                Punjab's art and craftwork tell the story of a cultural legacy
+                steeped in tradition. Renowned for its intricate Phulkari
+                embroidery and basket weaving these crafts reflect the region's
+                creative spirit.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Punjab"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Punjab ends  -->
+
+        <!-- Kerala Starts -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/KERALA\ 3.jpg')"
+              ></div>
+              <h4 class="text-center">Kerala Artwork</h4>
+              <p style="text-align: justify">
+                Kerala, on India's southwestern coast, is known as "God's Own
+                Country" for its diverse landscapes and rich traditions. The
+                region's artwork reflects artistic finesse, cultural diversity,
+                and deep-rooted traditions.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Kerala"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Kerala ends  -->
+
+        <!-- Rajasthan starts -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/RAJASTHAN\ 3.jpg')"
+              ></div>
+              <h4 class="text-center">Rajasthan Artwork</h4>
+              <p style="text-align: justify">
+                Rajasthan, India's "Land of Kings," is renowned for majestic
+                palaces, vibrant traditions, and artistic treasures like
+                miniature paintings and Bandhani textiles, set against the
+                backdrop of desert landscapes.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Rajasthan"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Rajasthan ends  -->
+
+        <!-- Madhya Pradesh starts -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/MP\ 3.png')"
+              ></div>
+              <h4 class="text-center">Madhya Pradesh Artwork</h4>
+              <p style="text-align: justify">
+                Madhya Pradesh, in central India, is a canvas of diverse art
+                forms, including vibrant Gond tribal paintings, intricate Bagh
+                print textiles, and ancient Dhokra metal casting, showcasing the
+                state's rich cultural heritage.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#MP"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Madhya Pradesh Ends -->
+
+        <!-- Odisha starts -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/ODISHA\ 3.jpg')"
+              ></div>
+              <h4 class="text-center">Odisha Artwork</h4>
+              <p style="text-align: justify">
+                Odisha, situated on the eastern coast of India, is a treasure
+                trove of exquisite handicrafts, each narrating tales of
+                tradition, artistry, and cultural richness.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Odisha"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Odisha ends -->
+
+        <!-- Tamil Nadu starts -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/TAMIL-NADU.jpg')"
+              ></div>
+              <h4 class="text-center">Tamil Nadu Artwork</h4>
+              <p style="text-align: justify">
+                Tamil Nadu, a cultural kaleidoscope in southern India, weaves
+                together ancient traditions, architectural splendors, and
+                dynamic arts. From classical dance forms to intricate crafts,
+                the state stands as a unique tapestry of cultural richness and
+                diversity.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#TamilNadu"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Tamil Nadu ends  -->
+
+        <!-- Karnataka starts -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/KARNATAKA.webp')"
+              ></div>
+              <h4 class="text-center">Karnataka Artwork</h4>
+              <p style="text-align: justify">
+                Karnataka, in southern India, features a diverse array of
+                traditional handicrafts, including opulent Mysore silk sarees,
+                lively Channapatna toys, and intricate Bidriware. These crafts
+                blend heritage, skill, and artistic expression, defining the
+                cultural essence of the state.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Karnataka"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Karnataka ends -->
+
+        <!-- Telangana starts -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/TELANGANA\ 3.jpg')"
+              ></div>
+              <h4 class="text-center">Telangana Artwork</h4>
+              <p style="text-align: justify">
+                Telangana, in southern India, boasts rich cultural heritage,
+                vibrant traditions, and unique art forms like Cheriyal painting,
+                depicting colorful narratives of mythology and daily life.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Telangana"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Telangana ends  -->
+
+        <!-- Uttar Pradesh starts -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/UP3.jpg')"
+              ></div>
+              <h4 class="text-center">Uttar Pradesh Artwork</h4>
+              <p style="text-align: justify">
+                Uttar Pradesh, in northern India, is famous for its diverse
+                handicrafts reflecting the rich cultural heritage of the region.
+                These include textiles, pottery, metalwork, woodwork, and more.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#UP"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Uttar Pradesh ends -->
+
+        <!-- Gujarat starts -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 px-3">
+          <div class="box">
+            <div class="box-content">
+              <div
+                class="box1-img img-fluid"
+                style="background-image: url('states/GUJARAT.jpg')"
+              ></div>
+              <h4 class="text-center">Gujarat Artwork</h4>
+              <p style="text-align: justify">
+                Gujarat, in western India, is known for its diverse handicrafts,
+                showcasing rich cultural heritage. Skilled artisans craft
+                traditional items like intricate embroidery, colorful textiles,
+                pottery, and woodwork, reflecting the state's artistic
+                traditions and diverse communities.
+              </p>
+              <div class="card-footer">
+                <div class="parent-button">
+                  <button
+                    class="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Gujarat"
+                  >
+                    Explore Crafts
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Gujarat ends -->
+      </div>
+    </div>
+    <!-- Regional art ends -->
+
+    <!-- Maharashtra Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maharashtra Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/warli\ painting\ 2.jpg')"
+              ></div>
+              <h3>Warli Painting</h3>
+              <p style="text-align: justify">
+                Originating from the Warli tribe, Warli paintings are
+                characterized by simple geometric shapes and depictions of daily
+                life.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.600</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/bidriware.jpg')"
+              ></div>
+              <h3>Silversheen Bidri Vase</h3>
+              <p style="text-align: justify">
+                Handicrafts made of a mixture of zinc and copper, and usually
+                finishing touch given with the silver are well known as
+                Bidriware.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.850</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/sawantwadi\ crafts.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Sawantwadi Toys</h3>
+              <p style="text-align: justify">
+                Sawantwadi lies in the district of Sindhudurg. It is famous for
+                its lacquerware. They are known as Sawantwadi Crafts.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.770</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/banjara.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Vintage Banjara Embroidery</h3>
+              <p style="text-align: justify">
+                Banjaara tribe's Lamani women use a small needle to create
+                beautiful geometric patterns, giving this fabric a unique and
+                charming look.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.2090</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bihar Modal -->
+    <div class="modal fade" id="Bihar">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Bihar Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/madhubani\ painting\ 2.jpeg');
+                "
+              ></div>
+              <h3>Madhubani Painting</h3>
+              <p style="text-align: justify">
+                Madhubani painting, also known as Mithila painting, is a
+                traditional art form that originated in the Mithila region of
+                Bihar.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.2500</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/tikuli\ art.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Handpainted Tikuli Art</h3>
+              <p style="text-align: justify">
+                Tikuli art involves the use of lacquer on paper. It often
+                features themes related to nature, mythology, folk tales, and
+                everyday life.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.855</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/sujani\ cushion\ cover.jpg');
+                "
+              ></div>
+              <h4>Hand Embroidery Sujani Work Cushion Cover</h4>
+              <p style="text-align: justify">
+                Traditional Bihar embroidery with colorful threadwork on cotton,
+                showcasing intricate designs inspired by nature and daily life.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.799</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/wood\ craft.jpeg')"
+              ></div>
+              <h3>Sculpture Bihar Lord Buddha Statue</h3>
+              <p style="text-align: justify">
+                The woodcraft utilizes Gambhar wood as its primary raw material,
+                resulting in a distinctive product that is skillfully
+                handcrafted by artisans.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.1000</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kerala Modal -->
+    <div class="modal fade" id="Kerala">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Kerala Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/muralpainting2.jpg')"
+              ></div>
+              <h3>Mural Painting</h3>
+              <p style="text-align: justify">
+                Kerala's mural paintings on temple and home walls vividly
+                portray mythological stories, reflecting the state's rich
+                cultural and spiritual heritage.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.598</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/screw-pine-craft.jpeg')"
+              ></div>
+              <h3>Screw Pine Craft Hand Bag</h3>
+              <p style="text-align: justify">
+                Kerala's screw pine handbags are eco-friendly accessories woven
+                with skill from Kora grass, showcasing intricate designs and
+                sustainable craftsmanship.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.600</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/aranmula-kannadi.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Metal Mirror</h3>
+              <p style="text-align: justify">
+                Aranmula Kannadi, unique to Aranmula, is a special metal mirror
+                crafted with precision and cultural significance, serving as
+                both a reflective surface and a symbol of tradition.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.2230</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/kathakali-mask.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Kathakali Mask</h3>
+              <p style="text-align: justify">
+                Kerala's Kathakali masks, handmade by skilled artisans, bring
+                the vibrant characters of the traditional dance-drama to life,
+                enhancing the theatrical charm of the state's cultural heritage.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.467</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Punjab Modal -->
+    <div class="modal fade" id="Punjab">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Punjab Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/punjabi_painting.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h4>Punjabi Folk Art Canvas Painting</h4>
+              <p style="text-align: justify">
+                Punjab's folk art features colorful paintings depicting rural
+                life, festivals, and traditional stories, serving as a visual
+                representation of the region's vibrant culture and heritage.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.460</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/handicraft_basket.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Handicraft Basket</h3>
+              <p style="text-align: justify">
+                Punjab's traditional craft of basket weaving skillfully uses
+                local materials like bamboo and cane to create functional and
+                decorative baskets.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.495</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/Brass_Sculpture_.webp');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Brass Tree With Birds</h3>
+              <p style="text-align: justify">
+                Punjab is known for its brass and wooden artifacts, including
+                utensils, home decor items, and traditional musical instruments.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.3975</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/phulkari.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Phulkari Bagh</h3>
+              <p style="text-align: justify">
+                Phulkari, a traditional embroidery, features vibrant threadwork
+                on shawls, dupattas, and suits, showcasing intricate folk
+                motifs.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.850</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rajasthan Modal -->
+    <div class="modal fade" id="Rajasthan">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Rajasthan Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/miniature_painting.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Miniature Painting</h3>
+              <p style="text-align: justify">
+                Rajasthan is celebrated for its intricate miniature paintings, a
+                traditional art form that flourished in the royal courts.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.999</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/handicraft_vase.webp');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Handicraft Vase</h3>
+              <p style="text-align: justify">
+                Jaipur, in Rajasthan, is renowned for its unique Blue Pottery,
+                crafted with a blend of quartz stone and Fuller's Earth. This
+                distinctive pottery includes beautifully glazed items like
+                plates, bowls, and tiles.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.895</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/leather-bag.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Hand Embroidery Leather Bag</h3>
+              <p style="text-align: justify">
+                Jodhpur, known as the "Sun City," is renowned for its leather
+                craft. Artisans skillfully create leather goods, including
+                shoes, bags, and belts, using traditional techniques.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.760</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/tie_dye_bandhani.webp');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Bandhani</h3>
+              <p style="text-align: justify">
+                Rajasthan's hallmark textile art, Bandhani, is a traditional
+                tie-dye technique. Artisans tie small portions of fabric before
+                dyeing, creating vibrant patterns on sarees, dupattas, and
+                turbans.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.899</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Madhya Pradesh Modal -->
+    <div class="modal fade" id="MP">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Madhya Pradesh Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/gond-art.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Gond Art</h3>
+              <p style="text-align: justify">
+                Gond art, by the Gond tribe, features vibrant visuals portraying
+                nature, animals, and tribal tales with bold colors and intricate
+                patterns.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.2260</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/dhokra\ art.jpg')"
+              ></div>
+              <h3>Dhokra Metal Craft Peacock Showpiece</h3>
+              <p style="text-align: justify">
+                Dhokra is an ancient form of metal casting using the lost wax
+                technique. Artisans create unique metal artifacts, figurines,
+                and jewelry using this traditional craft.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.1610</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/bamboo_craft.webp')"
+              ></div>
+              <h3>Bamboo Craft Product</h3>
+              <p style="text-align: justify">
+                Madhya Pradesh has a strong tradition of bamboo and cane craft.
+                Artisans skillfully weave these materials to create a variety of
+                products, including baskets, furniture, and decorative items.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.300</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/pottery-bowl.jpeg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Pottery Bowl</h3>
+              <p style="text-align: justify">
+                Madhya Pradesh's pottery bowls are versatile, serving both
+                everyday utility and aesthetic appeal. Crafted with artistic
+                skill, some bowls are designed for household use, while others
+                stand as decorative pieces.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.690</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Odisha Modal -->
+    <div class="modal fade" id="Odisha">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Odisha Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/filigree-jewelry.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h4>Silver Filigree Fruit Bowl</h4>
+              <p style="text-align: justify">
+                Cuttack in Odisha is famous for its silver filigree work, where
+                artisans create delicate jewelry and decorative items by
+                twisting and shaping fine silver wires.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.4995</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/Krishna_Lila_in_Patachitra_of_Odisha_480x480.webp');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Pattachitra Painting</h3>
+              <p style="text-align: justify">
+                Pattachitra is a traditional form of scroll painting that
+                depicts mythological stories and folklore. The paintings are
+                characterized by intricate details, vibrant colors, and use of
+                natural materials.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.770</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/horn_craft.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Horn Craft</h3>
+              <p style="text-align: justify">
+                The artisans in Cuttack and Paralakhemundi craft intricate items
+                like bangles, boxes, and decorative pieces using buffalo and cow
+                horns.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.675</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/applique_craft.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Appliqué Craft</h3>
+              <p style="text-align: justify">
+                Pipli, a town in Odisha, is famous for its colorful appliqué
+                work. Artisans use small pieces of fabric to create vibrant
+                designs, which are often seen in canopies, umbrellas, and wall
+                hangings.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.850</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tamil Nadu Modal -->
+    <div class="modal fade" id="TamilNadu">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tamil Nadu Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/Peacock-Tanjore-Painting-15-x-12-Inches.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Tanjore Painting</h3>
+              <p style="text-align: justify">
+                Tanjore paintings are characterized by rich colors, gold leaf,
+                and embedded stones. They often depict deities, mythological
+                scenes, and cultural motifs, showcasing intricate craftsmanship.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.7090</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/Gold-Toned--Black-Terracotta-Handpainted-Vases.jpg');
+                "
+              ></div>
+              <h4>Terracotta Handpainted Vase</h4>
+              <p style="text-align: justify">
+                Tamil Nadu's traditional pottery features terracotta items,
+                decorative vessels, and religious artifacts, crafted in villages
+                using age-old techniques.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.1785</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/Panchaloha\ Ganesh\ Idol.jpg');
+                "
+              ></div>
+              <h4>Panchaloha Ganesh Idol</h4>
+              <p style="text-align: justify">
+                Panchaloha refers to an alloy of five metals, and idols made
+                from this alloy are significant in Tamil Nadu's religious
+                traditions. These idols are often found in temples and are
+                considered sacred.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.1500</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/wooden-handicraft.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h4>Wooden Elephant Handicraft</h4>
+              <p style="text-align: justify">
+                Tamil Nadu, particularly Virudhunagar mavattam, is renowned for
+                its classical woodcrafts. Artisans in this district create
+                traditional and household articles, showcasing their expertise
+                in woodwork.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.549</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Telangana Modal -->
+    <div class="modal fade" id="Telangana">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Telangana Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/banjara_needle_purse.jpg')"
+              ></div>
+              <h3>Banjara Needle Purse</h3>
+              <p style="text-align: justify">
+                The Banjara community in Telangana is known for its vibrant
+                needlework. Banjara needle crafts often include colorful
+                embroidery on textiles, bags, and accessories.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.466</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/nirmal_handicraft.webp')"
+              ></div>
+              <h5>
+                Nirmal Handicraft Paper Mache Elephant Set of 2 Decorative
+                Showpiece
+              </h5>
+              <p style="text-align: justify">
+                Nirmal handicraft shines with its unique painting style, adding
+                intricate and colorful patterns to wooden articles, showcasing
+                traditional art at its best.
+              </p>
+              <h5 style="margin-left: 15px">Rs.289</h5>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/beaded_handicraft_lamp.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Beaded Handicraft Lamp</h3>
+              <p style="text-align: justify">
+                Telangana's beaded lamps, a blend of rich traditions and skilled
+                craftsmanship, illuminate spaces as captivating functional art.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.831</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/CHERIYAL_SCROLL_PAINTING.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Cheriyal Scroll Painting</h3>
+              <p style="text-align: justify">
+                Artisans use a specific type of scroll, known as 'Cheriyal
+                Scroll,' made from khadi cloth or canvas. Natural pigments
+                derived from minerals and plant sources are used for the vibrant
+                colors.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.2976</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Karnataka Modal -->
+    <div class="modal fade" id="Karnataka">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Karnataka Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/Bidriware-karnataka.webp');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Bidriware Silver Inlay Peafowl</h3>
+              <p style="text-align: justify">
+                Bidriware, from Bidar, Karnataka, is a unique metal craft
+                featuring silver or gold inlay on blackened alloy, creating
+                exquisite patterns on items like vases, trays, and ornaments.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.1990</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/Channapatna-Toy.webp');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Wooden Channapatna Toy</h3>
+              <p style="text-align: justify">
+                Channapatna toys, crafted in Channapatna, are traditional wooden
+                toys known for bright colors and unique designs, made from
+                locally sourced wood.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.560</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/sandalwood-karnataka.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Mysore Sandalwood Lord Krishna Statue</h3>
+              <p style="text-align: justify">
+                Karnataka is famous for its sandalwood, and artisans craft
+                intricate items such as figurines, showpieces, and jewelry from
+                this aromatic wood.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.6728</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/navalgund\ durries.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Navalgund Durries</h3>
+              <p style="text-align: justify">
+                Navalgund, in northern Karnataka, is known for its traditional
+                durries (cotton rugs). Handwoven with intricate patterns and
+                bright colors, these durries are popular household items.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.2531</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Uttar Pradesh Modal -->
+    <div class="modal fade" id="UP">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Uttar Pradesh Artwork</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/Wood-Carving-Stool.webp');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Wood Carving Stool</h3>
+              <p style="text-align: justify">
+                Saharanpur is famous for its intricate woodwork, including
+                carved furniture, decorative items, and toys. The traditional
+                artistry is often characterized by geometric patterns and floral
+                motifs.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.1249</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/Brassware-up.webp')"
+              ></div>
+              <h5>Metalware from Moradabad</h5>
+              <p style="text-align: justify">
+                Moradabad is renowned for its metalware, particularly brass and
+                copper items. The city produces a wide range of artifacts,
+                including utensils, decorative pieces, and religious items.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.2790</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/terracotta\ clay\ product.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Terracotta Clay Pot</h3>
+              <p style="text-align: justify">
+                Gorakhpur is known for its terracotta craftsmanship, producing a
+                variety of pottery items such as figurines, utensils, and
+                decorative pieces. The red clay used in this craft gives a
+                rustic appeal to the creations.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.1230</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/Khurja-Pottery.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h4>Khurja Pottery Handmade Vase</h4>
+              <p style="text-align: justify">
+                Khurja pottery, originating in Uttar Pradesh, is crafted with
+                locally sourced clay known for its quality. This traditional
+                pottery is celebrated for its vibrant designs and cultural
+                significance.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.1180</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gujarat Modal -->
+    <div class="modal fade" id="Gujarat">
+      <div class="modal-dialog modal-dialog-scrollable Modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Gujarat Artwork</h5>
+            <!-- <button class="close" data-bs-dismiss="modal" style="border: none; background-color: white; width: 30px;">
+                        <span>&times;</span>
+                    </button> -->
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="margin-right: 30px"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/beaded-cradle.webp')"
+              ></div>
+              <h3>Beaded Baby Cradle</h3>
+              <p style="text-align: justify">
+                Bead craft is the art of making decorative products with beads.
+                This art originated in Saurashtra and Khambat, two districts of
+                Gujarat.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.950</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="background-image: url('images/khavda-pottery.webp')"
+              ></div>
+              <h4>Khavda Pottery Handpainted Diffuser Tea Light Holder</h4>
+              <p style="text-align: justify">
+                Traditional craft from Gujarat's Kutch, crafting practical bowls
+                and plates, as well as delightful vases and figurines.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.650</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/Decorative\ Kutch\ Embroidery\ Umbrella.jpg');
+                  background-size: contain;
+                "
+              ></div>
+              <h3>Decorative Kutch Embroidery Umbrella</h3>
+              <p style="text-align: justify">
+                Gujarati umbrellas feature traditional motifs, bold colors, and
+                intricate details like mirror work and embroidery,showcasing
+                craftsmanship and cultural heritage.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 10px">Rs.2640</h4>
+            </div>
+
+            <div class="modal-box" style="margin-bottom: 40px">
+              <div
+                class="modal-img"
+                style="
+                  background-image: url('images/handcrafted-mirror-wall-hanging\(800\).webp');
+                  background-size: contain;
+                "
+              ></div>
+              <h4>Handcrafted Mirror Wall Hanging</h4>
+              <p style="text-align: justify">
+                This traditional craft involves embedding small mirrors, known
+                as "abhla," into fabric to create intricate patterns. This style
+                of embellishment is commonly found in garments, wall hangings,
+                and accessories.
+              </p>
+              <h4 style="margin-left: 15px; margin-top: 7px">Rs.800</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer section start -->
+    <div class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="parent-footer-logo">
+              <img src="../assets/images/craftopia.png" class="footer-logo-img" />
+            </div>
+            <div class="footer-tagline">
+              Craftopia: Where Every Creation Tells a Story
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h4 class="footer-title">Navigation</h4>
+            <div class="footer-left-menu">
+              <div>
+                <ul class="footer-menu">
+                  <li>
+                    <a href="../MINI_HOME/index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="../viewProducts/index.html">View Products</a>
+                  </li>
+                  <li>
+                    <a href="../AboutUs/aboutUs.html">About Us</a>
+                  </li>
+                  <li>
+                    <a href="../RegionalArt/regional.html">Regional Art</a>
+                  </li>
+                  <li>
+                    <a href="../Stories/stories.html">Success Stories</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div>
+              <h4 class="footer_taital">Phone Number</h4>
+              <p class="footer_text">+44 (0) 1303 297888</p>
+            </div>
+            <div>
+              <h4 class="footer_taital">Email</h4>
+              <p class="footer_text">demo@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h4 class="footer_taital">Address</h4>
+            <p class="footer_text">123 Main Street Anytown, USA 12345</p>
+          </div>
+        </div>
+        <div class="footer-section-2">
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-3">
+              <div>
+                <ul class="social-icons align-self-center">
+                  <li class="social-icon">
+                    <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                  </li>
+                  <li class="social-icon">
+                    <a href="#"
+                      ><i
+                        class="fa-brands fa-instagram text-white"
+                        style="
+                          background-image: linear-gradient(
+                            #4f5bd5,
+                            #962fbf,
+                            #d62976,
+                            #fa7e1e,
+                            #feda75
+                          );
+                          border-radius: 11px;
+                          padding: 5px;
+                          font-size: 27px;
+                        "
+                      ></i
+                    ></a>
+                  </li>
+                  <li class="social-icon">
+                    <a href="#"
+                      ><i
+                        class="fa-brands fa-linkedin fa-2x"
+                        style="color: #0a66c2"
+                      ></i
+                    ></a>
+                  </li>
+                  <li class="social-icon">
+                    <a href="#"
+                      ><i
+                        class="fa-brands fa-twitter fa-2x"
+                        style="color: #1da1f2"
+                      ></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-9 justify-content-center">
+              <input
+                type="text"
+                class="address-text"
+                placeholder="Enter your Email"
+                name="text"
+              />
+              <button type="button" class="subscribe-btn">SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer section end -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

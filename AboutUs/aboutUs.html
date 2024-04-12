@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="aboutUs.css" />
+    <script src="index.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              <div class="brand-logo m-auto">
+                <img
+                  src="../assets/images/craftopia.png"
+                  width="100%"
+                  class="align-self-center"
+                  alt="Brand Logo"
+                />
+              </div>
+            </h5>
+            <button
+              type="button"
+              class="btn-close position-absolute top-0 end-0 m-2"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form action="">
+            <div class="modal-body">
+              <div class="login-content text-center d-none">
+                <div class="input-group d-flex justify-content-center mb-3">
+                  <span class="input-group-text">
+                    <i class="fa-regular fa-circle-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="name-ip"
+                    placeholder="Username or Email"
+                  />
+                </div>
+                <div class="input-group d-flex justify-content-center mb-3">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-key"></i>
+                  </span>
+                  <input type="text" id="password-ip" placeholder="Password" />
+                </div>
+                <div>
+                  <span>Already a user?</span>
+                  <button type="button" class="button sign-up">Sign Up</button>
+                </div>
+              </div>
+              <div class="sign-up-content text-center">
+                <div class="input-group d-flex justify-content-center mb-3">
+                  <span class="input-group-text">
+                    <i class="fa-regular fa-circle-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="name-ips"
+                    placeholder="Username or Email"
+                  />
+                </div>
+                <div class="input-group d-flex justify-content-center mb-3">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-key"></i>
+                  </span>
+                  <input type="text" id="password-ips" placeholder="Password" />
+                </div>
+                <div class="input-group d-flex justify-content-center mb-3">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-key"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="re-enterpassword-ips"
+                    placeholder="Re-enter Password"
+                  />
+                </div>
+                <div>
+                  <span>Already a user?</span>
+                  <button type="button" class="button login">Login</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn submit-btn m-auto"
+                id="submitData-btn"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar starts here -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-style fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/images/craftopia.png" alt="Brand Logo" />
+        </a>
+        <div class="tagline">Craftopia: Where Every Creation Tells a Story</div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="../MINI_HOME/index.html"
+                target="_blank"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../viewProducts/index.html"
+                target="_blank"
+                >View Products</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../AboutUs/aboutUs.html" target="_blank"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../RegionalArt/regional.html"
+                target="_blank"
+                >Regional Art</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Stories/stories.html" target="_blank"
+                >Success Stories</a
+              >
+            </li>
+          </ul>
+          <form action="" class="d-none d-lg-block d-xl-block d-xxl-block">
+            <!-- Dono components ko pass lane k liye icon aur input tag vale ko -->
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" />
+              <!-- Icon ko input vale k andar daal dena aise seem karvane vala -->
+              <span class="input-group-text">
+                <button>
+                  <i class="fa fa-magnifying-glass"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+          <span>
+            <!-- Icon trigger modal -->
+            <i
+              class="user fa-solid fa-user mx-3 d-none d-lg-block d-xl-block d-xxl-block"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            ></i>
+          </span>
+          <i
+            class="fa-solid fa-cart-shopping mx-3 d-none d-lg-block d-xl-block d-xxl-block"
+          ></i>
+        </div>
+        <div class="d-lg-none">
+          <form action="">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" />
+              <span class="input-group-text">
+                <button>
+                  <i class="fa fa-magnifying-glass mx-3"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+          <span>
+            <!-- Icon trigger modal -->
+            <i
+              class="user fa-solid fa-user mx-3"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            ></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-cart-shopping mx-3"></i>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar ends here -->
+    <!-- Banner Page Starts -->
+    <div
+      class="row justify-content-center align-items-center text-center m-auto align-content-center banner text-white"
+      style="height: 100vh"
+    >
+      <p class="display-6 my-3 col-10 fw-bold">
+        Welcome to Craftopia – Where Art Meets Craftsmanship!
+      </p>
+      <p class="h4 col-8">
+        Craftopia is more than just a marketplace; it's a celebration of
+        creativity, a haven for handmade artistry, and a community that thrives
+        on the passion for crafting unique and exquisite pieces. We bring
+        together artisans and art enthusiasts in a vibrant online space, where
+        the spirit of handmade craftsmanship is celebrated in every creation.
+      </p>
+      <div class="row justify-content-center align-items-center" ;>
+        <button class="mb-3 btn">Shop Now</button>
+      </div>
+    </div>
+    <!-- Banner Page Ends -->
+
+    <!-- What Sets us Apart Starts -->
+    <div class="box">
+      <div class="row text-center justify-content-center">
+        <div class="header col-12 mt-3">
+          <p class="display-6 text-center p-3">What Set's Us Apart!!</p>
+        </div>
+        <div
+          class="row text-center diversity align-items-center"
+          style="width: 80%; min-width: 800px"
+        >
+          <img
+            src="Images/image01.avif"
+            alt=""
+            class="p-0 m-0 img0"
+            style="position: relative"
+          />
+          <div class="column text-center col-8">
+            <p class="h2 fw-bold">Diverse Artistry</p>
+            <p>
+              Discover a world of Diverse Artistry at Craftopia, where
+              creativity knows no bounds. Our curated collection features
+              hand-painted ceramics, intricately woven textiles, and more,
+              spanning various mediums to cater to every taste and style. From
+              vibrant hues to delicate details, each piece tells a unique story,
+              reflecting the rich tapestry of human imagination. Craftopia is
+              not just a marketplace; it's a celebration of artistic diversity,
+              where passion and skill converge to create one-of-a-kind
+              treasures.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center justify-content-center mt-3">
+        <div
+          class="row text-center diversity align-items-center"
+          style="width: 80%; min-width: 800px"
+        >
+          <img
+            src="Images/img02.webp"
+            alt=""
+            class="p-0 m-0 img0"
+            style="position: relative"
+          />
+          <div class="column text-center col-8">
+            <p class="h2 fw-bold">Supporting Artisans</p>
+            <p>
+              At Craftopia, our commitment goes beyond commerce—we believe in
+              fostering a connection between patrons and the hands behind the
+              art. When you choose Craftopia, you're not merely acquiring a
+              product; you're making an investment in the mastery, dedication,
+              and passion of our artisans. Each purchase becomes a symbiotic
+              link between the consumer and the creator, a recognition of the
+              craftsperson's tireless efforts. Craftopia is a conduit for
+              meaningful transactions, where every acquisition resonates with
+              the essence of artistry, craftsmanship, and heartfelt dedication.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center justify-content-center mt-3">
+        <div
+          class="row text-center diversity align-items-center"
+          style="width: 80%; min-width: 800px"
+        >
+          <img
+            src="Images/img03.jpg"
+            alt=""
+            class="p-0 m-0 img0"
+            style="position: relative"
+          />
+          <div class="column text-center col-8">
+            <p class="h2 fw-bold">Quality Assurance</p>
+            <p>
+              Quality Assurance at Craftopia is our unwavering commitment to
+              excellence. We adhere to the most rigorous standards, meticulously
+              examining each item in our collection. Every piece featured
+              undergoes a thorough vetting process, ensuring it aligns with our
+              stringent criteria for craftsmanship and durability. Our
+              dedication to quality extends beyond aesthetics, aiming to provide
+              you with not just products but enduring treasures. Craftopia is
+              your assurance of lasting satisfaction, where every acquisition is
+              a testament to the enduring quality and timeless beauty of
+              handmade craftsmanship.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center justify-content-center mt-3">
+        <div
+          class="row text-center diversity align-items-center"
+          style="width: 80%; min-width: 800px"
+        >
+          <img
+            src="Images/img04.webp"
+            alt=""
+            class="p-0 m-0 img0"
+            style="position: relative"
+          />
+          <div class="column text-center col-8">
+            <p class="h2 fw-bold">Customization and Personalization</p>
+            <p>
+              Craftopia invites you to personalize your experience with
+              Customization and Personalization options. Many of our skilled
+              artisans provide tailored choices, empowering you to shape your
+              purchase to match your distinct preferences. Unleash your
+              creativity and craft unique pieces that echo your individual
+              style. At Craftopia, we celebrate the art of personal expression,
+              ensuring your handmade treasures become not just possessions but
+              reflections of your identity and artistic flair.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center justify-content-center mt-3 p-3">
+        <div
+          class="row text-center diversity align-items-center"
+          style="width: 80%; min-width: 800px"
+        >
+          <img
+            src="Images/img05.jpg"
+            alt=""
+            class="p-0 m-0 img0"
+            style="position: relative; height: 250px"
+          />
+          <div class="column text-center col-8">
+            <p class="h2 fw-bold">Sustainability and Ethical Practices</p>
+            <p>
+              Craftopia's dedication to sustainability goes beyond rhetoric. Our
+              artisans prioritize locally sourced, eco-friendly materials,
+              ensuring each creation embodies environmental responsibility.
+              Every piece not only delights its owner but also serves as a
+              testament to our commitment to a healthier planet. Craftopia
+              embraces the philosophy of conscious consumerism, urging customers
+              to make informed choices. With every purchase, you contribute to
+              the livelihood of skilled artisans and actively participate in
+              fostering sustainable practices for a better, more harmonious
+              world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- What Sets us Apart Ends  -->
+    <!-- Why Craftopia Starts -->
+    <div
+      class="row mx-3 justify-content-center"
+      style="color: #2e0014; background-color: white"
+    >
+      <!-- <div class="header col-12 mt-3">
+            <p class="display-6  text-center p-3 ">Why Craftopia ?</p>
+        </div> -->
+      <div class="h4 text-center col-12 mt-3 p-3" style="width: 70%">
+        <p>
+          Craftopia is more than just a shopping destination; it's a place to be
+          inspired, to connect with artisans, and to infuse your life with the
+          beauty of handmade art. Join us on this creative journey, where every
+          piece tells a story, and every creation is a work of heart.
+        </p>
+      </div>
+    </div>
+    <!-- footer section start -->
+    <div class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="parent-footer-logo">
+              <img
+                src="../assets/images/craftopia.png"
+                class="footer-logo-img"
+              />
+            </div>
+            <div class="footer-tagline">
+              Craftopia: Where Every Creation Tells a Story
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h4 class="footer-title">Navigation</h4>
+            <div class="footer-left-menu">
+              <div>
+                <ul class="footer-menu">
+                  <li>
+                    <a href="../MINI_HOME/index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="../viewProducts/index.html">View Products</a>
+                  </li>
+                  <li>
+                    <a href="../AboutUs/aboutUs.html">About Us</a>
+                  </li>
+                  <li>
+                    <a href="../RegionalArt/regional.html">Regional Art</a>
+                  </li>
+                  <li>
+                    <a href="../Stories/stories.html">Success Stories</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div>
+              <h4 class="footer_taital">Phone Number</h4>
+              <p class="footer_text">+44 (0) 1303 297888</p>
+            </div>
+            <div>
+              <h4 class="footer_taital">Email</h4>
+              <p class="footer_text">demo@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h4 class="footer_taital">Address</h4>
+            <p class="footer_text">123 Main Street Anytown, USA 12345</p>
+          </div>
+        </div>
+        <div class="footer-section-2">
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-3">
+              <div>
+                <ul class="social-icons align-self-center">
+                  <li class="social-icon">
+                    <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                  </li>
+                  <li class="social-icon">
+                    <a href="#"
+                      ><i
+                        class="fa-brands fa-instagram text-white"
+                        style="
+                          background-image: linear-gradient(
+                            #4f5bd5,
+                            #962fbf,
+                            #d62976,
+                            #fa7e1e,
+                            #feda75
+                          );
+                          border-radius: 11px;
+                          padding: 5px;
+                          font-size: 27px;
+                        "
+                      ></i
+                    ></a>
+                  </li>
+                  <li class="social-icon">
+                    <a href="#"
+                      ><i
+                        class="fa-brands fa-linkedin fa-2x"
+                        style="color: #0a66c2"
+                      ></i
+                    ></a>
+                  </li>
+                  <li class="social-icon">
+                    <a href="#"
+                      ><i
+                        class="fa-brands fa-twitter fa-2x"
+                        style="color: #1da1f2"
+                      ></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-9 justify-content-center">
+              <input
+                type="text"
+                class="address-text"
+                placeholder="Enter your Email"
+                name="text"
+              />
+              <button type="button" class="subscribe-btn">SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer section end -->
+
+    <!-- Why Craftopia Ends -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

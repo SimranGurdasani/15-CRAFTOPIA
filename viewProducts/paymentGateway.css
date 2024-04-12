@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ececec;
+    font-family: Means Web,Georgia,Times,Times New Roman,serif;
+
+}
+
+.images{
+height: 70px;
+width: 60px;
+left:20px;
+text-align: center
+}
+
+.box-parent{
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    height: 93vh;
+    width: 45vw;
+    background-color: white;
+    position: relative;
+    top: 30px;
+}
+
+
+
+
