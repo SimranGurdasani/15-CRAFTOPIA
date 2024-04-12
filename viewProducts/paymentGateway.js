@@ -42,7 +42,7 @@ function paymentGateway(event) {
         console.log(val)
         if (val.status === 'success') {
           // Use a relative path to navigate to payment.html in the same directory
-          window.location.href="success.html"
+          window.location.href="../../SuccessPage/index.html"
         } else {
           // Alert the user to fill in all details if status is not 'success'
           alert("Please fill in all details.");
