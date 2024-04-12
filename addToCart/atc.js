@@ -1,84 +1,71 @@
-let cartProducts = []
-document.addEventListener('DOMContentLoaded', function() {
-    const cartBody = document.getElementById('cart-body');
-     cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+// window.onload = function () {
+//   localStorage.clear();
+//   console.log("Local storage cleared on page reload.");
+// };
 
-    // Function to add product to the table
-    function addToCart(product) {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${product.title}</td> 
+document.addEventListener("DOMContentLoaded", function () {
+  const cartBody = document.getElementById("cart-body");
+  let cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+
+  function addToCart(product) {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+            <td>${product.title}</td>
             <td>${product.price}</td>
             <td>${product.quantity}</td>
             <td>
-                <button class="btn remove" onclick="removeFromCart(this, ${cartProducts.indexOf(product)})">Remove</button>
+                <button class="btn remove" onclick="removeFromCart(this, ${cartProducts.indexOf(
+                  product
+                )})">Remove</button>
             </td>
         `;
-        cartBody.appendChild(row);
+    cartBody.appendChild(row);
+  }
+
+  cartProducts.forEach((product) => {
+    addToCart(product);
+  });
+
+  window.removeFromCart = function (button, index) {
+    if (index > -1) {
+      cartProducts.splice(index, 1);
+      localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+      const row = button.parentNode.parentNode;
+      cartBody.removeChild(row);
     }
-
-    // Render each product in the cartProducts
-    cartProducts.forEach(product => {
-        addToCart(product);
-    });
-
-    // Define removeFromCart on the window object to make it accessible from HTML
-    window.removeFromCart = function(button, index) {
-        if (index > -1) {
-            cartProducts.splice(index, 1); // Remove the item from the array
-            localStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Update localStorage
-            const row = button.parentNode.parentNode;
-            cartBody.removeChild(row); // Remove the row from the table
-        }
-    };
+  };
 });
 
 function addProducts(event) {
-    event.preventDefault(); 
-  
-    // if (!loginContent.classList.contains("d-none")) {
-    //   loginData(); 
-    // } else {
-    //   signUpData();
-    // }
-    cartProducts.forEach(product => {
-        addProductsToDatabase(product.title,product.price,product.quantity);
-    });
-    
-  }
-  
-  let checkoutbtn = document.querySelector("#checkoutbtn");
-  
-  checkoutbtn.addEventListener('click', addProducts);
+  event.preventDefault();
+  cartProducts.forEach((product) => {
+    addProductsToDatabase(product.title, product.price, product.quantity);
+  });
+}
 
-  function addProductsToDatabase(title,price,quantity){
-    
+let checkoutbtn = document.querySelector("#checkoutbtn");
+checkoutbtn.addEventListener("click", addProducts);
 
-    const body = {
-        "title": title,
-        "price": price,
-        "quantity": 1 //quantity aa jyega 
+function addProductsToDatabase(title, price, quantity) {
+  const body = {
+    title: title,
+    price: price,
+    quantity: quantity,
+  };
+
+  fetch("http://localhost:8081/addProducts", {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((val) => {
+      if (val.status === "success") {
+        window.location.href = "../../viewProducts/payment.html";
+      } else {
+        alert("Please fill in all details.");
       }
-  
-      fetch('http://localhost:8081/addProducts',{
-      method: "POST",
-      body: JSON.stringify(body),
-      headers: {
-        "Content-Type": "application/json",
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      
-    }).then((response)=>{
-      response.json().then((val)=>{
-        console.log(val)
-        if (val.status === 'success') {
-          // Use a relative path to navigate to payment.html in the same directory
-          window.location.href="../../viewProducts/payment.html"
-        } else {
-          // Alert the user to fill in all details if status is not 'success'
-          alert("Please fill in all details.");
-        }
-       
-      })
-    })
-  }
+    });
+}

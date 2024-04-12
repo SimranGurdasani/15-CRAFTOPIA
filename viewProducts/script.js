@@ -21,45 +21,6 @@ specialInstructions.forEach((specialInstruction, index) => {
   });
 });
 
-// qty btn
-// let sum=1
-// const viewProuducts = document.querySelectorAll('.end>button')
-const plusBtns = document.querySelectorAll("#plus");
-const qty = document.querySelectorAll("#quantity");
-const final_qty=1;
-// let value = parseInt(qty.textContent)
-
-plusBtns.forEach((plusBtn, index) => {
-  plusBtn.addEventListener("click", () => {
-    // console.log(qty.textContent)
-    // let value2 = parseInt(qty.textContent)
-    // let increase=sum+value2;
-    // qty.textContent=increase
-    // console.log(qty.textContent)
-    let currentValue = parseInt(qty[index].textContent);
-    qty[index].textContent = currentValue + 1;
-    console.log(qty[index].textContent);
-    final_qty=qty[index].textContent;
-  });
-});
-
-// let difference=1
-// let decrease=0
-const minusBtns = document.querySelectorAll("#minus");
-
-minusBtns.forEach((minusBtn, index) => {
-  minusBtn.addEventListener("click", () => {
-    // let value = parseInt(quantity.textContent)
-    if (qty[index].textContent != 1) {
-      let currentValue = parseInt(qty[index].textContent);
-      qty[index].textContent = currentValue - 1;
-      console.log(qty[index].textContent);
-      final_qty=qty[index].textContent;
-    }
-    // quantity.textContent=decrease
-  });
-});
-
 // left side
 const instock = document.querySelector("#instock");
 const availablility = document.querySelector("#availability");
@@ -181,62 +142,103 @@ let submitBtn = document.querySelector("#submitData-btn");
 
 submitBtn.addEventListener("click", Submit);
 
-// add to cart
-const cartProducts = [];
+// let cartProducts = [];
 
-function addToCart(title, price, final_qty) {
-  let product = {
-    title: title,
-    price: price,
-    final_qty: final_qty
-  };
+// function addToCart(title, price, quantity) {
+//   let productIndex = cartProducts.findIndex(
+//     (product) => product.title === title
+//   );
+//   if (productIndex !== -1) {
+//     // If product already exists in cart, update the quantity
+//     cartProducts[productIndex].quantity += quantity;
+//     console.log(
+//       "Quantity updated for",
+//       title,
+//       ":",
+//       cartProducts[productIndex].quantity
+//     );
+//   } else {
+//     // If product doesn't exist in cart, add it as a new entry
+//     let product = {
+//       title: title,
+//       price: price,
+//       quantity: quantity,
+//     };
+//     cartProducts.push(product);
+//     // console.log("Product added to cart:", product);
+//   }
+// }
 
-  cartProducts.push(product);
+// function updateQuantity(title, newQuantity) {
+//   let productIndex = cartProducts.findIndex(
+//     (product) => product.title === title
+//   );
+//   if (productIndex !== -1) {
+//     cartProducts[productIndex].quantity = newQuantity;
+//     console.log("Quantity updated for", title, ":", newQuantity);
+//   }
+// }
+let cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
 
+function addToCart(title, price, quantity) {
+  let productIndex = cartProducts.findIndex(
+    (product) => product.title === title
+  );
+  if (productIndex !== -1) {
+    cartProducts[productIndex].quantity += quantity;
+  } else {
+    let product = { title, price, quantity };
+    cartProducts.push(product);
+  }
   localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+}
 
-  console.log("Product added to cart:", product);
+function updateQuantity(title, newQuantity) {
+  let productIndex = cartProducts.findIndex(
+    (product) => product.title === title
+  );
+  if (productIndex !== -1) {
+    cartProducts[productIndex].quantity = newQuantity;
+    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  }
 }
 
 document.querySelectorAll(".addtocartbtn").forEach((button) => {
   button.addEventListener("click", function () {
     let title = this.closest(".col-fluid").querySelector("p").textContent;
     let price = this.closest(".col-fluid").querySelector("#price").textContent;
-    // let quantity = this.closest(".addtocartbtn").querySelector("#quantity").textContent;
-    // let quantity = document.querySelector("#quantity").textContent;
-
-    addToCart(title, price, 1);
+    let quantity = parseInt(
+      this.closest(".col-fluid").querySelector("#quantity").textContent
+    );
+    console.log(quantity);
+    console.log(typeof quantity);
+    addToCart(title, price, quantity);
 
     console.log("All products in the cart:");
-    console.log(cartProducts);
-
-    // window.location.href='addToCart/atc.html'
-    // document.addEventListener("DOMContentLoaded", () => {
-
-    // });
+    // console.log(cartProducts);
   });
 });
 
-// const cartBody = document.getElementById("cart-body");
-// if (cartBody) {
-//   // All cart-related JavaScript here
-//   // Function to add product to the table
-//   function addToCart(product) {
-//     const row = document.createElement("tr");
-//     row.innerHTML = `
-//       <td>${product.title}</td> 
-//       <td>${product.price}</td>
-//       <td>
-//           <button class="btn remove" onclick="removeFromCart(this, ${cartProducts.indexOf(
-//             product
-//           )})">Remove</button>
-//       </td>
-//   `;
-//     cartBody.appendChild(row);
-//   }
+document.querySelectorAll("#plus").forEach((button) => {
+  button.addEventListener("click", function () {
+    let title = this.closest(".col-fluid").querySelector("p").textContent;
+    let quantityElement = this.closest(".col-fluid").querySelector("#quantity");
+    let currentQuantity = parseInt(quantityElement.textContent);
+    let newQuantity = currentQuantity + 1;
 
-//   // Render each product in the cartProducts
-//   cartProducts.forEach((product) => {
-//     addToCart(product);
-//   });
-// }
+    quantityElement.textContent = newQuantity;
+    updateQuantity(title, newQuantity);
+  });
+});
+
+document.querySelectorAll("#minus").forEach((button) => {
+  button.addEventListener("click", function () {
+    let title = this.closest(".col-fluid").querySelector("p").textContent;
+    let quantityElement = this.closest(".col-fluid").querySelector("#quantity");
+    let currentQuantity = parseInt(quantityElement.textContent);
+    let newQuantity = Math.max(currentQuantity - 1, 0); // Ensure quantity doesn't go below 0
+
+    quantityElement.textContent = newQuantity;
+    updateQuantity(title, newQuantity);
+  });
+});
