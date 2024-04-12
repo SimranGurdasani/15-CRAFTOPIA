@@ -56,3 +56,9 @@ body {
   transition: ease all 0.3s;
   transform: scale(1.06);
 }
+
+.total-container {
+  margin-top: 20px;
+  text-align: right;
+  font-weight: bold;
+}

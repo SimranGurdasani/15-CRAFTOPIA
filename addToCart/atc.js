@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </td>
         `;
     cartBody.appendChild(row);
+    updateTotal(); 
   }
 
   cartProducts.forEach((product) => {
@@ -32,8 +33,26 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
       const row = button.parentNode.parentNode;
       cartBody.removeChild(row);
+      updateTotal();
     }
   };
+
+      function calculateTotal(cartProducts) {
+    let total = 0;
+    cartProducts.forEach(product => {
+        const price = parseFloat(product.price.replace(/[^\d]/g, '')); // Remove non-numeric characters
+        const quantity = parseInt(product.quantity);
+        total += price * quantity;
+    });
+    return total; 
+}
+
+    // Function to update the total price display
+    function updateTotal() {
+        const totalPriceElement = document.getElementById('total-price');
+        const total = calculateTotal(cartProducts);
+        totalPriceElement.textContent = total; 
+    }
 });
 
 function addProducts(event) {
@@ -68,4 +87,6 @@ function addProductsToDatabase(title, price, quantity) {
         alert("Please fill in all details.");
       }
     });
+
+
 }
