@@ -2,10 +2,10 @@
 //   localStorage.clear();
 //   console.log("Local storage cleared on page reload.");
 // };
-
+let cartProducts =[]
 document.addEventListener("DOMContentLoaded", function () {
   const cartBody = document.getElementById("cart-body");
-  let cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+  cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
 
   function addToCart(product) {
     const row = document.createElement("tr");
@@ -85,7 +85,7 @@ function addProductsToDatabase(title, price, quantity) {
         window.location.href = "../../viewProducts/payment.html";
       } else {
         alert("Please fill in all details.");
-      }
+       }
     });
 
 
